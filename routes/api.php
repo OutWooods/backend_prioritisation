@@ -17,27 +17,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/job', [
-	'uses' => 'JobController@postJob',
-	'as' => 'post-job'
-]);
-
 Route::get('/jobs', [
 	'uses' => 'JobController@getJobs',
 	'as' => 'get-jobs'
 ]);
 
-Route::put('/job/{job}', [
-	'uses' => 'JobController@updateJob',
-	'as' => 'update-job'
-]);
-
-Route::delete('/job/{job}', [
-	'uses' => 'JobController@deleteJob',
-	'as' => 'delete-job'
-]);
-
-Route::get('/job/{job}', [
+Route::get('/jobs/{job}', [
 	'uses' => 'JobController@getJob',
 	'as' => 'get-job'
 ]);

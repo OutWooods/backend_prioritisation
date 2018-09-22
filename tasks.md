@@ -13,4 +13,4 @@
    - [x] Single job
    - [x] Multiple jobs
    - [x] Non-existant job
--[ ] Stage 1 done (then hook the two up...)
+-[x] Stage 1 done (then hook the two up...)

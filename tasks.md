@@ -8,6 +8,6 @@
 -[x] Link up DB 
 -[x] Migrate
 -[x] Make the actual controller 
--[ ] Get controllers working with postman
+-[x] Get controllers working with postman
 -[ ] Write unit tests for controllers
 -[ ] Stage 1 done (then hook the two up...)

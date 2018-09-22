@@ -10,4 +10,7 @@
 -[x] Make the actual controller 
 -[x] Get controllers working with postman
 -[ ] Write unit tests for controllers
+   - [x] Single job
+   - [x] Multiple jobs
+-[ ] Write unit tests for models
 -[ ] Stage 1 done (then hook the two up...)

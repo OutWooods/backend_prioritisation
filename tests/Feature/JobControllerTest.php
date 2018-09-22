@@ -38,4 +38,16 @@ class JobControllerTest extends TestCase
             ],
         ]);
     }
+
+    /** @test */
+    function you_can_get_all_the_jobs()
+    {
+        $jobs = factory(Job::class, 3)->create();
+
+        $response = $this->json('GET', "/api/jobs");
+
+        $response->assertStatus(200);
+        $this->assertEquals(3, count($response->json('jobs')));
+        $this->assertEquals($jobs->first()->id, $response->json('jobs')[0]['id']);
+    }
 }

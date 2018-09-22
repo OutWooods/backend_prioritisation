@@ -44,10 +44,18 @@ class JobControllerTest extends TestCase
     {
         $jobs = factory(Job::class, 3)->create();
 
-        $response = $this->json('GET', "/api/jobs");
+        $response = $this->json('GET', '/api/jobs');
 
         $response->assertStatus(200);
         $this->assertEquals(3, count($response->json('jobs')));
         $this->assertEquals($jobs->first()->id, $response->json('jobs')[0]['id']);
+    }
+
+    /** @test */
+    function you_cannot_get_a_job_which_doesnt_exist()
+    {
+        $response = $this->json('GET', '/api/jobs/1');
+
+        $response->assertStatus(404);
     }
 }

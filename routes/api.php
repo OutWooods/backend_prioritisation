@@ -17,6 +17,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('/login', 'Authcontroller@login');
+
 Route::get('/jobs', [
 	'uses' => 'JobController@getJobs',
 	'as' => 'get-jobs'

@@ -36,4 +36,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'passport' => [
+        'client_token' => env('PASSPORT_CLIENT_KEY'),
+        'client_id' => env('PASSPORT_CLIENT_ID'),
+        'login_endpoint' => env('PASSPORT_API_LOGIN'),
+    ],
 ];
